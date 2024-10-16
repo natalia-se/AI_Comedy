@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Comedy Night</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .hero {
+        height: 100vh;
+        background-image: url("images/hero.jpeg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      #startCompetition {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      #startCompetition:hover {
+        background-color: #45a049;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+      }
+      h2 {
+        text-align: center;
+      }
+      .results {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>AI Comedy Night</h1>
+      <a href="#results"
+        ><button id="startCompetition">Start Competition</button></a
+      >
+    </div>
+    <div class="container">
+      <div class="results" id="results">
+        <h2 id="theme"></h2>
+        <div style="display: flex; justify-content: space-between">
+          <div style="width: 48%">
+            <h3>GPT-3 Joke</h3>
+            <p id="joke_gpt3"></p>
+          </div>
+          <div style="width: 48%">
+            <h3>GPT-4 Joke</h3>
+            <p id="joke_gpt4"></p>
+          </div>
+        </div>
+        <h2>Results</h2>
+        <p id="scores"></p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
